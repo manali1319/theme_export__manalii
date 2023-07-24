@@ -1,0 +1,121 @@
+{%- if section.settings.image_left != blank or section.settings.image_right != blank -%}
+      <div class="animation" id="animation">
+      {%- if  section.settings.image_left != blank -%}
+         <img src="{{ section.settings.image_left | img_url: 'master' }}"  id="wall_left" class="left_img ">
+      {%- endif -%}
+    
+       {%- if section.settings.image_right != blank -%}
+         <img src="{{ section.settings.image_right | img_url: 'master' }}"  id="wall_right" class="right_img  ">
+       {%- endif -%}
+    </div>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "home animation",
+   "class": "section home-image-section",
+    "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Image1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Image2"
+    }
+  ],
+      "presets": [
+        {
+          "name": "Home aniamtion"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .animation{
+        position: absolute;
+    display: flex;
+    align-items: center;
+    top: 41%;
+    left: 43%;
+    transform: translate(-41%, -45%);
+    flex-direction: row-reverse;
+  }
+.left_img {
+   overflow: hidden;
+    position: relative;
+    right: 50px;
+  transition: all .7s ease-in-out !important;
+
+}
+  .right_img {
+       overflow: hidden;
+    position: relative;
+    left: 168px;
+    transition: all .7s ease-in-out;
+}
+.mymove_left{
+    right: -14vw !important;
+}
+.mymove_right {
+   left: -13vw !important;
+}
+
+@media (max-width: 1799px){
+  .left_img , .right_img {   width:32vw;}
+}
+@media (max-width: 1439px){
+   .left_img {    right: 0;}
+  .right_img {    left: 148px;}
+}
+@media (max-width: 1199px){
+  .mymove_right {    left: -9vw!important;}
+  .mymove_left {    left: 19vw!important;}
+    .right_img {        left: 140px;    }
+    .animation {    left: 39%;}
+}
+   @media (max-width: 768px){
+     .animation {    z-index: 111;}
+     .right_img {    left: 93px;}
+}
+@media (max-width: 575px){
+  .mymove_right {    left: -23vw!important;}
+  .animation {    left: 29%;    top: 39%;  }
+  .main_animation{
+    width: 100%;
+    overflow: hidden;
+    left: 41%!important;
+    overflow-x: hidden;
+  }
+    .left_img, .right_img {    width: 47vw;}
+}
+@media (max-width: 480px){
+.right_img {    left: 53px;}
+.animation {    left: 32%;    top: 38%;}
+}
+{% endstylesheet %}
+
+
+<script>
+  $(document).ready(function () {
+ $(window).scroll(function() {
+  var scrollTop = $(window).scrollTop();
+  console.log(scrollTop);
+    if( scrollTop >  200){
+        $('#wall_left').addClass('mymove_left');
+        $('#wall_right').addClass('mymove_right');
+        $('#animation').addClass('main_animation');
+    }else{
+       $('#wall_left').removeClass('mymove_left');
+       $('#wall_right').removeClass('mymove_right');
+       $('#animation').removeClass('main_animation');
+    }
+   // if( scrollTop < 200){
+   //    $('#wall_left').removeClass('mymove_left');
+   //      $('#wall_right').removeClass('mymove_right');
+   // }
+});
+});
+</script>

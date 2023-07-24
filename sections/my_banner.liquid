@@ -1,0 +1,71 @@
+<section>
+ <div class="why_singal page-width">
+     {% if section.settings.heading != blank %}  <div cass="text1"><h1>{{ section.settings.heading }} </h1></div>{% endif %}
+      {% if section.settings.section_img != blank %} <div class="imgg"><img src="{{ section.settings.section_img | img_url:'master' }}"/></div>{% endif %}
+      <div calss="mytext">
+       {% for block in section.blocks %}
+           <div class="img_text1">
+            {% if block.settings.sub_img1 != blank %} <div class="img1"><img src="{{ block.settings.sub_img1 | img_url:'master' }}"/></div>{% endif %}
+            {% if block.settings.sub_text1 != blank %}  <div class="text1">{{ block.settings.sub_text1 }}</div>{% endif %}
+          </div>
+       {% endfor %}
+      </div>
+</div>
+</section>
+
+<style>
+  .why_singal{
+    display:flex;
+      background:{{ section.settings.background_color }};
+  }
+  .img_text1{
+    display:flex;
+  }
+</style>
+ 
+{% schema %}
+  {
+    "name": "sigle section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "heading"
+      },
+         {
+          "type": "image_picker",
+          "id": "section_img",
+          "label": "Image"
+          },
+         {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#FFFFFF"
+        }
+    ],
+          "blocks":[
+    {
+      "type":"text",
+      "name": "content",
+    "settings":[
+      {
+        "type": "richtext",
+        "id": "sub_text1",
+        "label": "left side block imge"
+      },
+      {
+        "type": "image_picker",
+        "id": "sub_img1",
+        "label": "left side block imge content"
+      } 
+    ]
+  }
+ ],
+     "presets": [
+      {
+        "name": "single section"
+      }
+    ]
+}
+{% endschema %}
