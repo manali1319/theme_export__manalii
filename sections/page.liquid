@@ -20,7 +20,7 @@
       {%- if section.settings.page.title != blank -%}
         {{ section.settings.page.title | escape }}
       {%- else -%}
-        {{ 'sections.page.title' | t }} pages
+        {{ 'sections.page.title' | t }} - pages
       {%- endif -%}
     </h2>
     <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
