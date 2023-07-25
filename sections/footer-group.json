@@ -1,1 +1,55 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","settings":{"color_scheme":"background-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":false,"margin_top":36,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "92889f5c-4602-42fd-832d-3a7b12e52f3c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b70b55c6527046e28e87df135eb0870e_1.png",
+            "image_width": 550,
+            "alignment": ""
+          }
+        },
+        "77068002-fffd-416b-9bef-11336d25255a": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "menu"
+          }
+        },
+        "dfbcb9c1-ffa6-46a1-bb5e-a90c0c95c1f5": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "92889f5c-4602-42fd-832d-3a7b12e52f3c",
+        "77068002-fffd-416b-9bef-11336d25255a",
+        "dfbcb9c1-ffa6-46a1-bb5e-a90c0c95c1f5"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 100,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
