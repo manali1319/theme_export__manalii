@@ -26,12 +26,19 @@
             "heading": "Heading",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
+        },
+        "28763869-dafa-4a3e-9b38-d8de947060cd": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
         "92889f5c-4602-42fd-832d-3a7b12e52f3c",
         "77068002-fffd-416b-9bef-11336d25255a",
-        "dfbcb9c1-ffa6-46a1-bb5e-a90c0c95c1f5"
+        "dfbcb9c1-ffa6-46a1-bb5e-a90c0c95c1f5",
+        "28763869-dafa-4a3e-9b38-d8de947060cd"
       ],
       "settings": {
         "color_scheme": "background-1",
