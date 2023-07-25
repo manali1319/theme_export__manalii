@@ -1,7 +1,8 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Fruits.png",
-    "logo_width": 50,
+    "logo": "shopify:\/\/shop_images\/home_sale.png",
+    "logo_width": 100,
+    "favicon": "shopify:\/\/shop_images\/D-Fine_White_1.png",
     "type_header_font": "prompt_n7",
     "heading_scale": 100,
     "type_body_font": "dm_sans_n4",
